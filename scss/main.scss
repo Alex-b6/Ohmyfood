@@ -1,0 +1,264 @@
+/*import fichiers scss*/
+
+@import "./base/colors";
+@import "./utils/mixin";
+@import "./utils/helpers";
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    @extend %flexbox-center;
+    flex-direction: column;
+}
+
+/*header*/
+.header {
+    @extend %flexbox-center;
+    margin-bottom: 5px;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+    &_logo_size {
+        width: 196px;
+        height: 33px;
+        margin: 14px 0 13px 0;
+    }
+}
+
+/* Section 1 - Location */
+.location {
+    @extend %flexbox-center;
+    height: 50px;
+    background-color: #EAEAEA;
+    &__text {
+        color:#353535;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.fa-location-dot {
+    width: 12px;
+    height: 16px;
+    color: #353535;
+    margin-right: 17px;
+}
+
+/** Section 2 - presentation **/
+.presentation {
+    display: flex;
+    flex-flow: wrap column;
+    background: #f6f6f6;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0 30px 0;
+}
+
+.presentation h2 {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.presentation h4 {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.presentation button {
+    background: linear-gradient(170deg, #ff79da, #9356dc);
+    color: white;
+    padding: 13px 18.75px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 4px 4px 2px lightgrey;
+    width: 218px;
+    height: 50px;
+    font-family: "Roboto", sans-serif;
+    align-self: center;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+/*** Section 3 - Process / steps ***/
+.process__contain {
+    padding: 25px 0;
+    width: 100%;
+    background: white;
+    @extend %flexbox-center;
+    flex-direction: column;
+}
+
+.process {
+    width: 95%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 0 ;   
+    display: flex;
+    flex-direction: column ;
+    &__title {
+        margin: 0;
+    }
+    &__step {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        height: auto;
+        width: auto;
+        margin: 10px 20px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.16);
+        &:hover {
+            @include button-hover;
+            background: lighten(#f7f7f7, 3%);
+        }
+    }
+        &__number {
+                background-color: $color-primary;
+                color: white;
+                position: absolute;
+                padding: 3px 8px 3px 8px;
+                border-radius: 500px;
+                transform: translateX(-50%);
+            }
+        &__icon {
+            color: #7E7E7E;
+            margin: 0 20px;
+        }
+        &__text {
+            margin: 16px 0;
+        }
+    &__steps {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.fa-store {
+    color: $color-primary;
+}
+
+/**** Section 4 - restaurants ****/
+.restaurants {
+    margin: 0;
+    background: #f6f6f6;
+    padding: 20px;
+    max-width: 1200px;
+    @extend %flexbox-center;
+    flex-direction: column;
+    align-items: flex-start;
+    & a {
+        text-decoration: none;
+        color: #353535;
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border-radius: 20px;
+    transform: scale(1.0);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    background-color: white;
+    &_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    & figcaption {
+        font-family: "Roboto";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        @extend %flexbox-center;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #99e2d0;
+        color: #008766;
+        width: 80px;
+        height: 29px;
+    }
+    &_h3 {
+        width: 70%;
+        padding: 13px 0 5px 13px;
+        font-weight: 700;
+    }
+    &_p {
+        width: 70%;
+        padding: 0 0 12px 13px;
+        font-weight: 300;
+        text-decoration: none;
+    }
+}
+
+.heart {
+    font-size: 22px;
+}
+.restaurants .heart {
+    margin-top: 7px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px;
+    &_title {
+        font-family: "shrikhand";
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        gap: 16px;
+    }
+    &_text {
+        font-size: 16px;
+        font-weight: 500;
+        width: 190px;
+        gap:7px;
+    }
+}
+
+.fa-utensils {
+    width: 11px;
+    height: 13px;
+    margin-right: 11px;
+}
+
+.fa-handshake-angle {
+    width: 12px;
+    height: 13px;
+    margin-right: 10px;
+}
+
+/***** Media Queries *****/
+
+@media (min-width: 768px) {
+    
+}
