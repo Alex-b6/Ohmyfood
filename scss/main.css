@@ -1,15 +1,82 @@
 /*import fichiers scss*/
-/*@mixin flexbox-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
+
 .card figcaption, .restaurants, .process__contain, .location, .header, .main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+input {
+  box-sizing: content-box;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: initial;
+  font-size: medium;
+  font-weight: normal;
+  background-color: transparent;
+  color: inherit;
+  text-align: left;
+  box-shadow: none;
+  outline: none;
+}
+
+a, label {
+  cursor: pointer;
+}
+
+.favorite-selected {
+  cursor: pointer;
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fav 1s 1;
+}
+
+@keyframes fav {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.25);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  20% {
+    transform: scale(1.5);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  30% {
+    transform: scale(1.4);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  40% {
+    transform: scale(1.5);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(1.5);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  70% {
+    transform: scale(1.4);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  80% {
+    transform: scale(1.5);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  90% {
+    transform: scale(1.25);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*Reset CSS*/
 * {
   margin: 0;
@@ -172,6 +239,13 @@ body {
   color: #353535;
 }
 
+.restaurants-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+  padding-bottom: 78px;
+}
+
 .card {
   position: relative;
   display: flex;
@@ -206,16 +280,29 @@ body {
   width: 80px;
   height: 29px;
 }
-.card_h3 {
-  width: 70%;
-  padding: 13px 0 5px 13px;
-  font-weight: 700;
+.card_content {
+  width: 100%;
+  padding-top: 16px;
+  padding-left: 3.82%;
+  padding-bottom: 12px;
+  height: 30.3%;
+  display: flex;
+  justify-content: space-between;
 }
-.card_p {
-  width: 70%;
-  padding: 0 0 12px 13px;
-  font-weight: 300;
-  text-decoration: none;
+.card_text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 100%;
+}
+
+.favorite-selected {
+  cursor: pointer;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fav 1s 1;
 }
 
 .heart {
@@ -226,6 +313,38 @@ body {
   margin-top: 7px;
   margin-right: 25px;
   flex-shrink: 0;
+}
+
+.favorite-restaurants {
+  margin-right: 7.03%;
+}
+
+.unfilled-heart {
+  cursor: pointer;
+}
+
+/* Initial styles for the unfilled-heart */
+input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
+  display: block;
+}
+
+/* Initial styles for the filled-heart */
+input[type=checkbox]:not(:checked) ~ .favorite-restaurants .filled-heart {
+  display: none;
+}
+
+/* Styles when the checkbox is checked */
+input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
+  display: none;
+}
+
+/* Styles when the checkbox is checked */
+input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
+  display: block;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 /*footer*/

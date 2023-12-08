@@ -54,24 +54,32 @@
         <!-- 4th section : restaurants -->
         <section class="restaurants">
             <h2>Restaurants</h2>
+            <div class="restaurants-cards">
         <!--La palette du gout-->
-            <a href="#">
                 <article class="card">
-                    <figure>
-                        <img src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo la palette du gout" class="card_img">
-                        <figcaption>Nouveau</figcaption>
-                    </figure>
-                    <h3 class="card_h3">La palette du goût</h3>
-                    <p class="card_p">Ménilmontant</p>
-                    <div class="restaurants-card-favorite">
-                        <input type="checkbox" id="palette-like">
-                        <label for="palette-like" title="Ajoutez aux favoris" class="like-restaurants">
-                            <i class="fa-regular fa-heart heart page-heart unfilled-heart" aria-hidden="true">::before</i>
-                            <i class="fa-solid fa-regular fa-heart heart page-heart filled-heart favorite-selected" aria-hidden="true"></i>
-                        </label>
-                    </div> 
+                    <a href="">
+                        <figure>
+                            <img src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo la palette du gout" class="card_img">
+                            <figcaption>Nouveau</figcaption>
+                        </figure>
+                    </a>
+                    <span class="card_content">
+                        <a href="">
+                            <div class="card_text">
+                                <h3 class="card_h3">La palette du goût</h3>
+                                <p class="card_p">Ménilmontant</p>
+                            </div>
+                        </a>
+                        <div class="card_favorite">
+                            <input type="checkbox" id="palette-favorite">
+                            <label for="palette-favorite" title="Ajoutez aux favoris" class="favorite-restaurants">
+                                <i class="fa-regular fa-heart heart page-heart unfilled-heart" aria-hidden="true"></i>
+                                <i class="fa-solid fa-regular fa-heart heart page-heart filled-heart favorite-selected" aria-hidden="true"></i>
+                            </label>
+                        </div>
+                    </span> 
                 </article>
-            </a>
+            </div>
         </section>
     </main>
     <!--footer-->

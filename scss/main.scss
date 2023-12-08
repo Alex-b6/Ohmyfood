@@ -168,6 +168,12 @@ body {
     }
 }
 
+.restaurants-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    padding-bottom: 78px;
+}
 .card {
     position: relative;
     display: flex;
@@ -201,18 +207,31 @@ body {
         width: 80px;
         height: 29px;
     }
-    &_h3 {
-        width: 70%;
-        padding: 13px 0 5px 13px;
-        font-weight: 700;
+    &_content {
+        width: 100%;
+        padding-top: 16px;
+        padding-left: 3.82%;
+        padding-bottom: 12px;
+        height: 30.3%;
+        display: flex;
+        justify-content: space-between;
     }
-    &_p {
-        width: 70%;
-        padding: 0 0 12px 13px;
-        font-weight: 300;
-        text-decoration: none;
+    &_text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width: 100%;
     }
 }
+
+.favorite-selected {
+    cursor: pointer;
+    background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fav 1s 1;
+  }
 
 .heart {
     font-size: 22px;
@@ -222,6 +241,38 @@ body {
     margin-right: 25px;
     flex-shrink: 0;
 }
+
+.favorite-restaurants {
+    margin-right: 7.03%;
+  }
+  
+  .unfilled-heart {
+    cursor: pointer;
+  }
+  
+  /* Initial styles for the unfilled-heart */
+  input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
+    display: block;
+  }
+  
+  /* Initial styles for the filled-heart */
+  input[type=checkbox]:not(:checked) ~ .favorite-restaurants .filled-heart {
+    display: none;
+  }
+  
+  /* Styles when the checkbox is checked */
+  input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
+    display: none;
+  }
+  
+  /* Styles when the checkbox is checked */
+  input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
+    display: block;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
 
 /*footer*/
 .footer {
