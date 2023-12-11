@@ -231,7 +231,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: fav 1s 1;
-  }
+}
 
 .heart {
     font-size: 22px;
@@ -244,35 +244,35 @@ body {
 
 .favorite-restaurants {
     margin-right: 7.03%;
-  }
+}
   
-  .unfilled-heart {
+.unfilled-heart {
     cursor: pointer;
-  }
+}
   
-  /* Initial styles for the unfilled-heart */
-  input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
+/* Initial styles for the unfilled-heart */
+input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
     display: block;
-  }
+}
   
-  /* Initial styles for the filled-heart */
-  input[type=checkbox]:not(:checked) ~ .favorite-restaurants .filled-heart {
+/* Initial styles for the filled-heart */
+input[type=checkbox]:not(:checked) ~ .favorite-restaurants .filled-heart {
     display: none;
-  }
+}
   
-  /* Styles when the checkbox is checked */
-  input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
+/* Styles when the checkbox is checked */
+input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
     display: none;
-  }
+}
   
-  /* Styles when the checkbox is checked */
-  input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
+/* Styles when the checkbox is checked */
+input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
     display: block;
-  }
+}
 
-  input[type=checkbox] {
+input[type=checkbox] {
     display: none;
-  }
+}
 
 /*footer*/
 .footer {
