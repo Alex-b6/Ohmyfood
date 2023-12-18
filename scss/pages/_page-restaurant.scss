@@ -1,0 +1,277 @@
+// reset css
+
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: #f6f6f6;
+}
+
+// header - restaurant page
+
+.page-header {
+    @extend %flexbox-center;
+    height: 63px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    &_arrow {
+        width: 17.2px;
+        height: 16px;
+        font-size: 20px;
+        color: #353535;
+    }
+    &_logo {
+        width: 196px;
+        height: 33px;
+        margin: 14px 0 13px 0;
+    }
+}
+
+.arrow-container {
+    @extend %flexbox-center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 17px;
+    left: 17px;
+}
+
+.logo-container {
+    @extend %flexbox-center;
+    padding-top: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+// image/top menu
+
+.image-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: calc(100% / 1.3636);
+    overflow: hidden;
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// wrapper+title/top menu
+
+.page-main-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 45px 45px 0 0;
+    padding-top: 32px;
+    position: relative;
+    top: -55px;
+}
+
+.page-main-title {
+    display: flex;
+    font-family: Shrikhand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 17px 42px 17px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #101010;
+}
+
+@media screen and (max-width: 360px) {
+    .page-main-title {
+        font-size: calc(0.65rem + 0.3vw);
+    }
+}
+
+.favorite-restaurants {
+    margin-right: 7.03%;
+}
+  
+// menu section
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 13px;
+    margin-bottom: 40px;
+    row-gap: 12px;
+}
+  
+.menu-title {
+    text-transform: uppercase;
+    height: 27px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+}
+
+.menu-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10.67%;
+    border-bottom: 3px solid #99e2d0;
+}
+
+.menu-restaurant-item {
+    background-color: white;
+    box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
+    border-radius: 15px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    white-space: nowrap;
+    width: 100%;
+}
+  
+.menu-restaurant-item-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.menu-restaurant-item-price {
+    display: flex;
+    align-items: flex-end;
+    z-index: 40;
+    height: 100%;
+    padding: 0 13.5px 13.5px 0;
+}
+  
+.menu-restaurant-item-txt label {
+    height: 100%;
+}
+  
+.menu-labels {
+    position: absolute;
+    height: 72px;
+    width: 100%;
+    z-index: 1000;
+}
+  
+.menu-restaurant-item-txt {
+    padding: 0 0 0 13.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.menu-restaurant-item-txt h2 {
+    padding-top: 15px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+  
+.menu-restaurant-item-txt p {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 15px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+  
+input[type="checkbox"]:checked
+    ~ .menu-restaurant-item
+    .menu-restaurant-item-selected {
+    width: 68px;
+    right: 0;
+}
+  
+.menu-restaurant-item-selected {
+    position: relative;
+    height: 100%;
+    width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    border-radius: 0 20% 20% 0;
+    transition: 0.56s;
+}
+  
+.menu-restaurant-item:nth-child(3) {
+    box-shadow: none;
+}
+
+// button
+
+.order-button {
+    width: 186px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    background: $gradient;
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 18.75px 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover  {
+        @include button-hover;
+    }
+}
+
+.order-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
