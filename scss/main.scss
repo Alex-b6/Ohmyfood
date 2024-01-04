@@ -222,7 +222,6 @@ body {
     max-width: 1440px;
     @extend %flexbox-center;
     flex-direction: column;
-    /*align-items: flex-start;*/
         & h2 {
             padding: 20px 0;
             width: 100%;
@@ -293,9 +292,8 @@ body {
 .favorite-selected {
     cursor: pointer;
     background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: fav 1s 1;
 }
 
