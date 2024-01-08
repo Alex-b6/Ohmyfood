@@ -798,6 +798,10 @@ input[type=checkbox] {
   width: 190px;
   gap: 7px;
 }
+.footer_text a {
+  text-decoration: none;
+  color: white;
+}
 
 .fa-utensils {
   width: 11px;

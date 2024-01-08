@@ -357,6 +357,10 @@ input[type=checkbox] {
         font-weight: 500;
         width: 190px;
         gap:7px;
+        & a{
+            text-decoration: none;
+            color: white;
+        }
     }
 }
 
