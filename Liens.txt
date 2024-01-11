@@ -1,0 +1,8 @@
+Lien vers le repository Git :
+
+https://github.com/Alex-b6/Ohmyfood
+
+
+Lien vers la version en ligne du site : 
+
+https://main--beautiful-cheesecake-d177cc.netlify.app/
