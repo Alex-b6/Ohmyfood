@@ -224,7 +224,7 @@ body {
     flex-direction: column;
         & h2 {
             padding: 20px 0;
-            width: 100%;
+            width: 99%;
             align-items: flex-start;
         }
     & a {
@@ -393,6 +393,10 @@ input[type=checkbox] {
         width: 322px;
     }
 
+    section.restaurants {
+        padding-bottom: 40px;
+    }
+
     .restaurants h2{
         max-width: 1200px;
     }
@@ -405,9 +409,10 @@ input[type=checkbox] {
     .restaurants-cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        column-gap: 100px;
+        column-gap: 50px;
         row-gap: 50px;
         padding-bottom: 10px;
+        padding: 0 20px 10px 20px;
     }
 
     .card img {
@@ -417,6 +422,46 @@ input[type=checkbox] {
 
     .restaurants-card {
         height: 251px;
+    }
+
+    .footer {
+        flex-direction: row-reverse;
+        padding: 37px 25px;
+        gap: 7px;
+    }
+
+    .footer_title {
+        width: 110px;
+        height: 27px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_text {
+        font-size: 14px;
+    }
+
+    .footer_text.long {
+        width: 170px;
+        height: 19px;
+    }
+
+    .footer_text.short {
+        width: 123px;
+        height: 20px;
+    }
+
+    .footer :nth-child(1) {order: 1;}
+    .footer :nth-child(2) {order: 4;}
+    .footer :nth-child(3) {order: 3;}
+    .footer :nth-child(4) {order: 2;}
+    .footer :nth-child(5) {order: 1;}
+}
+
+@media (min-width:1025px) {
+
+    .restaurants-cards {
+        column-gap: 100px;
     }
 
     .footer {
@@ -432,6 +477,10 @@ input[type=checkbox] {
         align-items: center;
     }
 
+    .footer_text {
+        font-size: 16px;
+    }
+
     .footer_text.long {
         width: 190px;
         height: 19px;
@@ -441,10 +490,4 @@ input[type=checkbox] {
         width: 130px;
         height: 20px;
     }
-
-    .footer :nth-child(1) {order: 1;}
-    .footer :nth-child(2) {order: 4;}
-    .footer :nth-child(3) {order: 3;}
-    .footer :nth-child(4) {order: 2;}
-    .footer :nth-child(5) {order: 1;}
 }
